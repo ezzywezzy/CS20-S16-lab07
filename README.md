@@ -4,7 +4,7 @@ Goals for this lab
 This lab reinforces some ideas from previous labs:
 
 -   working with Turtle Graphics
--   test driven development
+-   test-driven development
 
 A key concept is:
 
@@ -13,26 +13,12 @@ A key concept is:
 Step by Step Instructions
 =========================
 
-Step 0: Pair Partner Assignment
+Step 0: Pair Partners
 -------------------------------
 
-Note: The instructions for this lab were originally written under the assumption that pair programming was mandatory for this lab. HOWEVER, Pair Programming is now OPTIONAL for this lab. It is ok to work SOLO on this lab, if you so choose.
+The instructions for this lab were originally written under the assumption that pair programming was mandatory for this lab. However, Pair Programming is now OPTIONAL for this lab. It is ok to work SOLO on this lab, if you so choose.
 
-You should still register on Gauchospace, and indicate "SOLO".
-
-### Step 0a: Pair Partner Selection (takes place BEFORE lab)
-
-You may choose a pair partner, or you can let us assign one for you.
-
-If you want to choose a pair partner, you MUST make a post to the Gauchospace pair partner forum BEFORE the deadline, and your proposed pair partner MUST follow up by commenting on the post that she/he agrees to the pairing. Both of you MUST be in the same lab section, and MUST agree and post before the deadline---otherwise, you will be assigned new pair partners.
-
-If we assign one for you, we will choose a DIFFERENT pair partner than the one you had in lab02.
-
-### Step 0b: Pair Partner Registration
-
-Please make a posting to the Gauchospace form for registering pair partners for lab07
-
-<https://gauchospace.ucsb.edu/courses/mod/forum/view.php?id=166701>
+@@@@@@@@@@@@@@@ GAUCHOSPACE FORUM MAYBE @@@@@@@@@@@@@@@@@
 
 Step 1: Make sure you both understand the Unit Circle
 -----------------------------------------------------
@@ -42,7 +28,7 @@ Step 1: Make sure you both understand the Unit Circle
 
 In this lab, you'll be working with the unit circle, a concept from trigonometry that will help us in drawing polygons and stars using Turtle Graphics.
 
-I will assume you are familiar with the unit circle, and might just need a refresher course. (If you are truly seeing the unit circle for the first time, you may want to come to your instructors office hours for a crash course.)
+I will assume you are familiar with the unit circle, and might just need a refresher course. (If you are truly seeing the unit circle for the first time, you may want to come to your instructor's office hours for a crash course.)
 
 ### Unit Circle Basics
 
@@ -50,28 +36,13 @@ The unit circle is a circle with radius 1—i.e. one unit of measurement, e.g. 1
 
 The unit circle is labeled with angles that range from 0 degrees to 360 degrees (which is all the way around the circle.) However, we typically label the unit circle with angles in radians instead of degrees. This angles range from 0 radians to 2π radians. All the way around the circle is 2π radians.
 
-<table border="2">
-<tr>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWithDegrees.png>
+![unitCircleWithDegrees](./images/unitCircleWithDegrees.png)
 
-</td>
-</tr>
-</table>
 The points on the unit circle at 0, π/2, π and 3π/2 are (1,0), (0,1), (-1,0), and (0,-1), respectively, as shown in the left hand figure below. The right hand figure shows that sometimes we draw circle where the radius is given by r, instead of being exactly 1.
 
-<table border="2">
-<tr>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWithFourMainPoints.png>
+![unitCircleWithFourMainPoints](./images/unitCircleWithFourMainPoints.png) | ![unitCircleWithFourMainPointsAndRadius](./images/unitCircleWithFourMainPointsAndRadius.png)
+--- | --- 
 
-</td>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWithFourMainPointsAndRadius.png>
-
-</td>
-</tr>
-</table>
 ### Finding a point on the unit circle
 
 We can find the (x,y) coordinates any point on the unit circle if we know the angle, by using some simple trigonometry properties—in particular, the first two of the well known SOHCAHTOA formulas:
@@ -87,72 +58,19 @@ With these in mind, we can see that in the pictures below:
 
 -   sin is opposite/hypotenuse, which is y/r, therefore: sin (θ)  = y/r, and therefore y = r sin (θ)    
 
-<table border="2">
-<tr>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWithSimpleAngle.png>
+| ![unitCircleWithSimpleAngle](./images/unitCircleWithSimpleAngle.png) | ![unitCircleWithSimpleAngle2](./images/unitCircleWithSimpleAngle2.png) |
+| --- | --- |
+| ![unitCircleWithSimpleAngle3](./images/unitCircleWithSimpleAngle3.png) ||
 
-</td>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWithSimpleAngle2.png>
-
-</td>
-</tr>
-<tr>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWithSimpleAngle3.png>
-
-</td>
-<td>
- 
-
-</td>
-</tr>
-</table>
 Now consider just four more pictures of the unit circle—I promise, these are the ones that will lead us into the Python coding!
 
-<table border="2">
-<tr>
-<td>
-3 points distributed evenly around the unit circle
+|||
+| --- | --- |
+| 3 points distributed evenly around the unit circle | 5 points distributed evenly around the unit circle |
+| ![unitCircleWith3Points](./images/unitCircleWith3Points.png) | ![unitCircleWith5Points](./images/unitCircleWith5Points.png) |
+| 6 points distributed evenly around the unit circle | 8 points distributed evenly around the unit circle |
+| ![unitCircleWith6Points](./images/unitCircleWith6Points.png) | ![unitCircleWit83Points](./images/unitCircleWith8Points.png) |
 
-</td>
-<td>
-5 points distributed evenly around the unit circle
-
-</td>
-</tr>
-<tr>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWith3Points.png>
-
-</td>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWith5Points.png>
-
-</td>
-</tr>
-<tr>
-<td>
-6 points distributed evenly around the unit circle
-
-</td>
-<td>
-8 points distributed evenly around the unit circle
-
-</td>
-</tr>
-<tr>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWith6Points.png>
-
-</td>
-<td>
-<http://www.cs.ucsb.edu/~pconrad/images/math/unitCircleWith8Points.png>
-
-</td>
-</tr>
-</table>
 ### The key points you must understand before going further
 
 -   Generalizing the idea shown in the four pictures above, we have a unit circle with n points, labeled 0 through n-1, distributed evenly around the unit circle.
@@ -334,7 +252,7 @@ Once you've coded it, you can test it by running the function:
 
 If it works, you should see the stars that appear in this picture. (Note that your turtle will probably just look like a triangle rather than like a turtle as in this picture.)
 
-<http://www.cs.ucsb.edu/~pconrad/cs8/10F/labs/lab03/images/lab03_testDrawStarsAtXY.png>
+![testDrawStarsAtXY](./images/lab03_testDrawStarsAtXY.png)
 
 When you get this, you may move on to the next step—but first, do a visual inspection of your code to remove any remaining @@@ comments in the part you've finished.
 
@@ -345,7 +263,7 @@ Now, do exactly the same thing for drawPolygon that you did for drawStar. You'll
 
 The finished product should look like this:
 
-<http://www.cs.ucsb.edu/~pconrad/cs8/10F/labs/lab03/images/lab03_testDrawPolygonsAtXY.png>
+![testDrawPolygonsAtXY](./images/lab03_testDrawPolygonsAtXY.png)
 
 When you get this, you may move on to the next step—but first, do a visual inspection of your code to remove any remaining @@@ comments in the part you've finished.
 
@@ -356,7 +274,7 @@ You'll see a call to the Main() function near the bottom of the file inside an i
 
 The Main() function just calls the two test functions you've already been working with. Comment out the tryIt() function call, and uncomment the Main() function call. Just uncomment and test. You should get this as your output (except that the turtle may not look quite as "fancy".)
 
-<http://www.cs.ucsb.edu/~pconrad/cs8/10F/labs/lab03/images/lab03_finishedProduct.png>
+![finishedProduct](./images/lab03_finishedProduct.png)
 
 Step 12: Check over your program and Submit it
 ----------------------------------------------
