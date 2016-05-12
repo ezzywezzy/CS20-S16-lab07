@@ -45,7 +45,7 @@ The points on the unit circle at 0, π/2, π and 3π/2 are (1,0), (0,1), (-1,0),
 
 ### Finding a point on the unit circle
 
-We can find the (x,y) coordinates any point on the unit circle if we know the angle, by using some simple trigonometry properties—in particular, the first two of the well known SOHCAHTOA formulas:
+We can find the (x,y) coordinates any point on the unit circle if we know the angle, by using some simple trigonometry properties—in particular, the first two of the well known SOH-CAH-TOA formulas:
 
 -   sine is opposite over hypotenuse
 -   cosine is adjacent over hypotenuse
@@ -92,40 +92,34 @@ You are now ready to look at some Python code!
 Step 4: Decide whose account you are going to work in
 -----------------------------------------------------
 
-Note: DO NOT share passwords with each other. That is a violation of your account agreement, and can result in suspension of your computing privileges at UCSB.
+Note if you are working on CSIL: DO NOT share passwords with each other. That is a violation of your account agreement, and can result in suspension of your computing privileges at UCSB.
 
 Instead, what you should do is:
 
--   Decide whose account you are going to work in for today's work session
--   <strong>At the end of every work session, copy your work to the other person's account</strong>
+-   Decide whose account you are going to work in for today's work session.
+-   **At the end of every work session, copy your work to the other person's account.**
 -   That way, if your pair partner [gets hit by a bus](http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219), you can continue working without him/her—you aren't 'out of luck'.
 
 Here's how to copy files from one account to another:
 
 Let's suppose that you did all the work in person1's account, and you now want to copy that into person2's account.
 
--   Person2 should log in. You can log in on a separate computer, or just use one of the terminal windows and use the command: <strong>ssh person2@csil.cs.ucsb.edu </strong>
-    </li>
--   Person2 cd's into their ~/cs8 directory
-    </li>
+-   Person2 should log in. You can log in on a separate computer, or just use one of the terminal windows and use the command: `ssh person2@csil.cs.ucsb.edu`
+-   Person2 cd's into their *~/cs20* directory
 -   Person2 types this command:
-
-`scp -r <strong><em>person1</em></strong>@csil.cs.ucsb.edu:cs8/lab07 lab07.snapshot.<strong>date</strong><em><strong>.time</strong></em><br />`
+    `scp -r person1@csil.cs.ucsb.edu:cs8/lab07 lab07.snapshot.date.time`
 
 In that command:
 
--   replace <em><strong>person1</strong></em> with person1's CSIL username (e.g. jsmith)
--   replace <em><strong>date.time</strong></em> with the date and time (e.g. <strong>Aug12.1.15pm</strong>)
--   don't include any slashes or spaces in the <strong>date.time</strong> string—it must be a valid part of a filename--periods and dashes are ok though.
+-   replace person1 with person1's CSIL username (e.g. jsmith)
+-   replace date.time with the date and time (e.g. Aug12.1.15pm)
+-   don't include any slashes or spaces in the date.time string—it must be a valid part of a filename--periods and dashes are ok though
 
-Example: `<strong>scp -r fredjones@csil.cs.ucsb.edu:cs8/lab07 lab07.snapshot.aug12.1.15pm</strong>`
+Example: `scp -r fredjones@csil.cs.ucsb.edu:cs8/lab07 lab07.snapshot.aug12.1.15pm`
 
 -   After you type this command, you'll be prompted for a password. Person1 should type his/her password.
--   Don't <em><strong>share</strong></em> the password, just have person1 <em><strong>type it </strong></em>in person2's window.
-    </li>
-    </ul>
-    </li>
--   If it works, there will now be a directory called lab07.snapshot.date.time in person2's directory that is a complete copy of the ~/cs8/lab07 directory from person1's account.
+-   Don't **_share_** the password, just have person1 type it in person2's window.
+-   If it works, there will now be a directory called `lab07.snapshot.date.time` in person2's directory that is a complete copy of the *~/cs20/lab07* directory from person1's account.
 -   Please read the "final thoughts" below so that you understand what the proper use of this process it—it is a powerful command, but it has the potential to be abused. With great power comes great responsibility.
 
 It is only necessary for one of you to submit the work via turnin, as long as both names are in each file.
@@ -134,41 +128,44 @@ But, if you are the person whose account is not the one from which the turnin st
 
 ### Some final thoughts on this step
 
--   In this class pair programming is permitted on <em><strong>some</strong></em> assignments.
--   The scp command above <em><strong>could</strong></em> be used to copy code from one account to another on assignments where you are <em><strong>not</strong></em> permitted to work together—but <em><strong>that would be wrong</strong></em>.
--   So don't do that.
+-   In this class pair programming is permitted on *some* assignments.
+-   The scp command above *could* be used to copy code from one account to another on assignments where you are not permitted to work together—but **_that would be wrong_**.
+-   So don't do that. :)
 
 Step 5: Create a directory for lab07 on one of your accounts
 ------------------------------------------------------------
 
-First, create a directory (folder) called lab07, inside your cs8 folder, which is in turn, inside your home directory.
+First, create a directory (folder) called lab07, inside your cs20 folder, which is in turn, inside your home directory.
 
-A short way to say that is: create a directory <strong>~/cs8/lab07</strong>
+A short way to say that is: create a directory *~/cs20/lab07*
 
 You can do this in one step with the command:
 
-    -bash-4.2$ mkdir ~/cs8/lab07
+    -bash-4.2$ mkdir ~/cs20/lab07
     -bash-4.2$
 
 Then cd into that directory. This too can be done in one step:
 
-    -bash-4.2$ cd ~/cs8/lab07
+    -bash-4.2$ cd ~/cs20/lab07
     -bash-4.2$
 
-Step 6: Copy lab07Funcs.py and lab07Tests.py
+Step 6: Copy `lab07Funcs.py` and `lab07Tests.py`
 --------------------------------------------
 
-Bring up IDLE (the command is `idle3`, and use File =\> New to open a window for function definitions.
+Bring up IDLE (the command is `idle`, and use File =\> New to open a window for function definitions.
 
-In one window, create a new file called lab07Funcs.py with the code from this link:
+In one window, create a new file called `lab07Funcs.py` with the code from this link:
 
 -   <http://www.cs.ucsb.edu/~pconrad/cs8/14S/labs/lab07/lab07Funcs.py>
 
-and in the other window, put the code from this link in a file called lab07Tests.py:
+and in the other window, put the code from this link in a file called `lab07Tests.py`:
 
 -   <http://www.cs.ucsb.edu/~pconrad/cs8/14S/labs/lab07/lab07Tests.py>
+  
+@@@@@@@@@@@@ UPDATE THESE LINKS WITH LINKS TO THE FILES ON GITHUB @@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@ CONTINUE FROM HERE @@@@@@@@@@@@@@@
 
-Step 7. Run the lab07Tests.py file for the first time
+Step 7. Run the `lab07Tests.py` file for the first time
 -----------------------------------------------------
 
 Then, choose Run =\> Run Module, and see the output. You should see something familiar: a bunch of failing tests.
