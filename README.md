@@ -156,14 +156,11 @@ Bring up IDLE (the command is `idle`, and use File =\> New to open a window for 
 
 In one window, create a new file called `lab07Funcs.py` with the code from this link:
 
--   <http://www.cs.ucsb.edu/~pconrad/cs8/14S/labs/lab07/lab07Funcs.py>
+-   [lab07Funcs.py](https://raw.githubusercontent.com/UCSB-CMPTGCS20-S16/CS20-S16-lab07/master/lab07Funcs.py?token=AKSMwiIJ5L-zQZWKXmHMI4FrmiFARLgqks5XQ_IrwA%3D%3D)
 
 and in the other window, put the code from this link in a file called `lab07Tests.py`:
 
--   <http://www.cs.ucsb.edu/~pconrad/cs8/14S/labs/lab07/lab07Tests.py>
-  
-@@@@@@@@@@@@ UPDATE THESE LINKS WITH LINKS TO THE FILES ON GITHUB @@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@ CONTINUE FROM HERE @@@@@@@@@@@@@@@
+-   [lab07Tests.py](https://raw.githubusercontent.com/UCSB-CMPTGCS20-S16/CS20-S16-lab07/master/lab07Tests.py?token=AKSMwtyftbEMKCE0ZQjUimVLk2IjLm7Oks5XQ_KxwA%3D%3D)
 
 Step 7. Run the `lab07Tests.py` file for the first time
 -----------------------------------------------------
@@ -174,8 +171,8 @@ What's different this week is that getting the tests to pass isn't the end of th
 
 Nevertheless, the first job is to get the tests to pass.
 
-1.  In the file, find the section for the ithOfNPointsOnCircleX() function tests.
-2.  Directly under it, you'll see some test cases—but not all the test cases are complete. Test case number 11 for the ithOfNPointsOnCircleX needs you to finish it, using your knowledge of the unit circle.
+1.  In the file, find the section for the `ithOfNPointsOnCircleX()` function tests.
+2.  Directly under it, you'll see some test cases—but not all the test cases are complete. Test case number 11 for the `ithOfNPointsOnCircleX` needs you to finish it, using your knowledge of the unit circle.
 
 -   -   Ask yourself, in test case 11, what is the value of 'xxx'? That is, what is the x value for the second of three points on this circle?
     -   Ask yourself, what is the value of i? That is, which point are we trying to find?
@@ -183,20 +180,20 @@ Nevertheless, the first job is to get the tests to pass.
     -   With that information, figure out: what should the x value of that point be?
     -   Uncomment this test and fill it in.
 
-1.  Then, run the file again, and you'll see that ithOfNPointsOnCircleX now has twelve test cases. They are still all failing, but you should have a much better idea of how to fill in the formula, now that you've figured out one of the test cases for yourself.
-2.  So, now, replace the stub of ithOfNPointsOnCircleX with the correct formula. Now all eight test cases should pass.
-3.  Do the same for ithOfNPointsOnCircleY: first fix up all the test cases that need fixing up.
+1.  Then, run the file again, and you'll see that `ithOfNPointsOnCircleX` now has twelve test cases. They are still all failing, but you should have a much better idea of how to fill in the formula, now that you've figured out one of the test cases for yourself.
+2.  So, now, replace the stub of `ithOfNPointsOnCircleX` with the correct formula. Now all eight test cases should pass.
+3.  Do the same for `ithOfNPointsOnCircleY`: first fix up all the test cases that need fixing up.
 4.  Then, and only then, replace the stub with the correct formula. Now that all your test cases are passing, you are almost ready for the graphics part of this lab!
-5.  Before you move on, though, take a moment to clean up any @@@ type comments between the start of the file, and the end of the test cases for ithOfNPointsOnCircleY. You may like to use the Edit / Find menu option to look for @@@. This can make finding these a lot easier.
+5.  Before you move on, though, take a moment to clean up any @@@ type comments between the start of the file, and the end of the test cases for `ithOfNPointsOnCircleY`. You may like to use the Edit / Find menu option to look for @@@. This can make finding these a lot easier.
 
 We are ready for the next step, where we do some graphics.
 
-Step 9: Finishing up the drawPolygon function
+Step 9: Finishing up the `drawPolygon` function
 ---------------------------------------------
 
-Now, locate the drawPolygon() function. This function is almost, but not quite complete.
+Now, locate the `drawPolygon()` function. This function is almost, but not quite complete.
 
-Since this function's purpose is to draw something, rather than to return something, we can't check it with the normal assertEquals() methods that we use in "automatic" test cases.
+Since this function's purpose is to draw something, rather than to return something, we can't check it with the normal `assertEquals()` methods that we use in "automatic" test cases.
 
 The only effective way we have of testing it is to try drawing something, and use our human eyes to look at the output.
 
@@ -206,40 +203,40 @@ First take a moment to read over the function and understand how it works.
 
 As a reminder, there are two different ways we can draw graphics with Turtles: relative, and absolute.
 
--   When we use the functions: forward(distance), backward(distance), right(angle), and left(angle), we are doing <b>relative</b> movements with the turtle. Where the turtle ends up, and which way it is pointing <em>depends on where the turtle was, and which way it was pointing</em> before we made the function call.
--   When we use goto(x,y) we tell the turtle exactly where to go. Where it ends up does NOT depend on where the turtle was before the goto(x,y) call was done. In the same way, we can force the turtle to point in a certain direction by using setheading(angle). These are *absolute* commmands, since they specify absolutely what the new turtle's state should be and **do not depend on where the turtle was, and which way it was pointing** before we make the function call.
+-   When we use the functions: `forward(distance)`, `backward(distance)`, `right(angle)`, and `left(angle)`, we are doing **relative** movements with the turtle. Where the turtle ends up, and which way it is pointing *depends on where the turtle was, and which way it was pointing* before we made the function call.
+-   When we use `goto(x,y)` we tell the turtle exactly where to go. Where it ends up does NOT depend on where the turtle was before the `goto(x,y)` call was done. In the same way, we can force the turtle to point in a certain direction by using `setheading(angle)`. These are **absolute** commmands, since they specify absolutely what the new turtle's state should be and *do not depend on where the turtle was, and which way it was pointing* before we make the function call.
 
-In this drawPolygon() function, we tell the turtle exactly where to go in the Cartesian plane—we call this using "absolute" movements.
+In this `drawPolygon()` function, we tell the turtle exactly where to go in the Cartesian plane—we call this using "absolute" movements.
 
 Again, as a reminder:
 
--   The goto() function takes two parameters, x and y, which indicate exactly where the turtle should go.
--   The setheading() function takes one argument, which is an angle in degrees that the turtle should face. The angles are the same as those on the unit circle, and are specified in degrees.
+-   The `goto()` function takes two parameters, x and y, which indicate exactly where the turtle should go.
+-   The `setheading()` function takes one argument, which is an angle in degrees that the turtle should face. The angles are the same as those on the unit circle, and are specified in degrees.
 -   Notice the use of the for loop and the range function to draw all the lines—or almost all the lines—on the polygon.
 
-Just below the drawPolygon function, there is a tryIt() function. This is a function that starts out with every line commented out except for the one that creates a Turtle named Sheila.
+Just below the `drawPolygon` function, there is a `tryIt()` function. This is a function that starts out with every line commented out except for the one that creates a Turtle named Sheila.
 
-Near the bottom of the file, you'll find an if test that compares `__name__=="__main__"` and inside that if test there is a commented out call to the tryIt() function. Uncomment this call.
+Near the bottom of the file, you'll find an if test that compares `__name__=="__main__"` and inside that if test there is a commented out call to the `tryIt()` function. Uncomment this call.
 
-You can then "uncomment" one line at a time of the code inside the tryIt() function to see various polygons being drawn. Uncomment one of the lines, run the file and try running the lab07Funcs.py file.
+You can then "uncomment" one line at a time of the code inside the `tryIt()` function to see various polygons being drawn. Uncomment one of the lines, run the file and try running the `lab07Funcs.py` file.
 
 You'll notice that you get a polygon that is missing one side.
 
-Now, fix the drawPolygon function. There are at least two ways to go about it:
+Now, fix the `drawPolygon` function. There are at least two ways to go about it:
 
--   One way is to find the location in the definition of drawPolygon indicated by @@@, and add a line of code there.
+-   One way is to find the location in the definition of `drawPolygon` indicated by @@@, and add a line of code there.
 -   Another way is to adjust some other part of the file. Either method is fine, as long as the result ends up drawing a regular polygon, according to the "contract" in the comments that appear just before the function.
 
-Once drawPolygon is working, move on to drawStar. Try uncommenting the lines in tryIt() one at a time that call drawStar(). You should see that the call when n=3 does nothing, but the call when n=5 or n=6 will give you a five or six pointed star.
+Once `drawPolygon` is working, move on to `drawStar`. Try uncommenting the lines in `tryIt()` one at a time that call `drawStar()`. You should see that the call when n=3 does nothing, but the call when n=5 or n=6 will give you a five or six pointed star.
 
 Once that is all working, you are ready for the next step.
 
-Step 10: Generalizing the drawStar function
+Step 10: Generalizing the `drawStar` function
 -------------------------------------------
 
-The drawStar function has one drawback: although (0,0) doesn't exactly appear in the function, in a sense the "idea" that the star is drawn centered at (0,0) is nevertheless <em>hard coded</em> in the drawStar function. To make the function more general, what we need to do is add parameters x and y, and then add those values in, every time we make a call to the "goto" function of the Turtle.
+The `drawStar` function has one drawback: although (0,0) doesn't exactly appear in the function, in a sense the "idea" that the star is drawn centered at (0,0) is nevertheless *hard coded* in the drawStar function. To make the function more general, what we need to do is add parameters x and y, and then add those values in, every time we make a call to the "goto" function of the Turtle.
 
-Find the place in the file where there is a comment indicating you should add the function drawStarAtXY().
+Find the place in the file where there is a comment indicating you should add the function `drawStarAtXY()`.
 
 Read the comment, and then follow the instructions there to create this function.
 
@@ -253,10 +250,10 @@ If it works, you should see the stars that appear in this picture. (Note that yo
 
 When you get this, you may move on to the next step—but first, do a visual inspection of your code to remove any remaining @@@ comments in the part you've finished.
 
-Step 10: Generalizing the drawPolygon function
+Step 10: Generalizing the `drawPolygon` function
 ----------------------------------------------
 
-Now, do exactly the same thing for drawPolygon that you did for drawStar. You'll find comments for a drawPolygonAtXY() function, and a testDrawPolygonAtXY() function waiting for you in the file.
+Now, do exactly the same thing for `drawPolygon` that you did for drawStar. You'll find comments for a `drawPolygonAtXY()` function, and a `testDrawPolygonAtXY()` function waiting for you in the file.
 
 The finished product should look like this:
 
@@ -264,12 +261,12 @@ The finished product should look like this:
 
 When you get this, you may move on to the next step—but first, do a visual inspection of your code to remove any remaining @@@ comments in the part you've finished.
 
-Step 11: Uncomment the call to Main() function
+Step 11: Uncomment the call to `Main()` function
 ----------------------------------------------
 
-You'll see a call to the Main() function near the bottom of the file inside an if test for `__name__== "__main__"`.
+You'll see a call to the `Main()` function near the bottom of the file inside an if test for `__name__== "__main__"`.
 
-The Main() function just calls the two test functions you've already been working with. Comment out the tryIt() function call, and uncomment the Main() function call. Just uncomment and test. You should get this as your output (except that the turtle may not look quite as "fancy".)
+The `Main()` function just calls the two test functions you've already been working with. Comment out the `tryIt()` function call, and uncomment the `Main()` function call. Just uncomment and test. You should get this as your output (except that the turtle may not look quite as "fancy".)
 
 ![finishedProduct](./images/lab03_finishedProduct.png)
 
@@ -281,8 +278,10 @@ Before you submit your assignment, check these things:
 -   Did you remove all the @@@ comments, and do what they indicated you should?
 -   Do all of your test cases pass?
 -   Does your drawing look like the final stage picture?
--   Are your files lab07Funcs.py and lab07Tests.py inside the ~/cs8/lab07 directory on the Cooper or CSIL machines?
--   Finally, to maximize your chances of getting a good grade, look over the grading rubric (near the end of this web page), and make sure that you did everything called for there.
+-   Are your files `lab07Funcs.py` and `lab07Tests.py` inside the *~/cs20/lab07* directory?
+-   Finally, look over the grading rubric (near the end of this web page), and make sure that you did everything called for there.
+
+@@@@@@@@@@@@@ FIGURE OUT SUBMIT STUFF @@@@@@@@@@@@@@@
 
 To submit your assignment, you need to bring up a terminal window on CSIL.
 
