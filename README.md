@@ -1,3 +1,6 @@
+NOTE: THIS LAB IS NOT YET COMPLETE.
+====================================
+
 Goals for this lab
 ==================
 
@@ -17,8 +20,6 @@ Step 0: Pair Partners
 -------------------------------
 
 The instructions for this lab were originally written under the assumption that pair programming was mandatory for this lab. However, Pair Programming is now OPTIONAL for this lab. It is ok to work SOLO on this lab, if you so choose.
-
-@@@@@@@@@@@@@@@ GAUCHOSPACE FORUM MAYBE @@@@@@@@@@@@@@@@@
 
 Step 1: Make sure you both understand the Unit Circle
 -----------------------------------------------------
@@ -281,7 +282,7 @@ Before you submit your assignment, check these things:
 -   Are your files `lab07Funcs.py` and `lab07Tests.py` inside the *~/cs20/lab07* directory?
 -   Finally, look over the grading rubric (near the end of this web page), and make sure that you did everything called for there.
 
-@@@@@@@@@@@@@ FIGURE OUT SUBMIT STUFF @@@@@@@@@@@@@@@
+@@@@@@@@@@@@@ FIGURE OUT SUBMIT STUFF @@@@@@@@@@@@@@@@
 
 To submit your assignment, you need to bring up a terminal window on CSIL.
 
@@ -293,37 +294,37 @@ Evaluation and Grading Rubric
 =============================
 
 -   Professional software documentation practices
-    -   (10 pts) Naming the files lab07Funcs.py and lab07Tests.py
+    -   (10 pts) Naming the files `lab07Funcs.py` and `lab07Tests.py`
     -   (10 pts) Having a comment at the top of the file that complies with the instructions
 
 <!-- -->
 
 -   Writing test cases
-    -   (10 pts) Completing ithOfNPointsOnCircleX test case 11
-    -   (60 pts) Completing ithOfNPointsOnCircleY test cases 2 though 8 (10 points each)
+    -   (10 pts) Completing `ithOfNPointsOnCircleX` test case 11
+    -   (60 pts) Completing `ithOfNPointsOnCircleY` test cases 2 though 8 (10 points each)
 
 <!-- -->
 
 -   Replacing a stub with real code
-    -   (20 pts) Replace the stub for the ithOfNPointsOnCircleX function so the test cases pass,
-    -   (20 pts) Replace the stub for the ithOfNPointsOnCircleY function so the test cases pass
+    -   (20 pts) Replace the stub for the `ithOfNPointsOnCircleX1` function so the test cases pass,
+    -   (20 pts) Replace the stub for the `ithOfNPointsOnCircleY` function so the test cases pass
 
 <!-- -->
 
 -   Fixing broken code
-    -   (20 pts) Fix the drawPolygon function so it operates properly
+    -   (20 pts) Fix the `drawPolygon` function so it operates properly
 
 <!-- -->
 
 -   Generalizing code with hard-coded functionality
-    -   (25 pts) Generalizing the drawStar function so that it can draw a star anywhere in the Cartesian Plane
-    -   (25 pts) Generalizing the drawPolygon function so that it can draw a star anywhere in the Cartesian Plane
+    -   (25 pts) Generalizing the `drawStar` function so that it can draw a star anywhere in the Cartesian Plane
+    -   (25 pts) Generalizing the `drawPolygon` function so that it can draw a star anywhere in the Cartesian Plane
 
 <!-- -->
 
 -   Following Instructions
     -   (20 pts) Removing all @@@ comments from your final submission
-    -   (10 pts) Having an uncommented call to the Main() function that tests your submission as soon as it is run
+    -   (10 pts) Having an uncommented call to the `Main()` function that tests your submission as soon as it is run
     -   (40 pts) Submitting on time and according to instruction
     -   (30 pts) Making a post on the Gauchospace forum with your pair's names and the times you can work together
 
