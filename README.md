@@ -1,5 +1,3 @@
-NOTE: THIS LAB IS NOT YET COMPLETE.
-====================================
 
 Goals for this lab
 ==================
