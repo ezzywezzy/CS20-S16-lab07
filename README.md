@@ -261,6 +261,28 @@ And these, if your repo is on github.ucsb.edu:
 * pconrad
 * sarahmzhong
 
+Step 13: Final Submission
+-------------------------
+
+Before submitting, do your final inspection—look over the rubric, make sure everything looks ok.
+
+We are NOT using submit.cs in this case to test our code or submit. 
+
+The only thing you need to do to submit is to go on Gauchospace, and put in the name of the repo where we can find your code and your web page.
+
+Go to the assignment on Gauchospace marked "lab07 submission".
+
+Here's a link: https://gauchospace.ucsb.edu/courses/mod/assign/view.php?id=598618
+
+In the place where you can submit text, please type in:
+
+* Your github repo for lab07
+
+If you can figure out how to do so, it is helpful if you can make the URL's clickable links. This requires using the "link" icon in the edit bar, selecting the URL, and then copying/pasting it into the box for the link target.  (If you can't figure it out, no worries.)
+
+Once you've done that, that's a sign that you are ready for your lab07 to be
+"graded", so to speak.
+
 Evaluation and Grading Rubric
 =============================
 
