@@ -90,78 +90,47 @@ To be able to answer those last questions, we will write two Python functions ca
 
 You are now ready to look at some Python code!
 
-Step 4: Decide whose account you are going to work in
------------------------------------------------------
+Step 4: Create a CS20-S16-lab07 repo
+------------------------------------
 
-Note if you are working on CSIL: DO NOT share passwords with each other. That is a violation of your account agreement, and can result in suspension of your computing privileges at UCSB.
+Create a private repo, either on:
+* https://github.com   
+ - free if you have registered/confirmed your UCSB email address, AND
+ - requested a student discount at http://education.github.com
+ 
+OR ON
 
-Instead, what you should do is:
+* https://github.ucsb.edu
+ - Here, you use your ECI/CSIL username/password
+ 
+Make a private repo, with a README, and a Python .gitignore.
 
--   Decide whose account you are going to work in for today's work session.
--   **At the end of every work session, copy your work to the other person's account.**
--   That way, if your pair partner [gets hit by a bus](http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219), you can continue working without him/her—you aren't 'out of luck'.
+Clone it on your own computer.
 
-Here's how to copy files from one account to another:
+Then, use THIS special command to add a remote from which you will pull the starter code:
 
-Let's suppose that you did all the work in person1's account, and you now want to copy that into person2's account.
+```
+git remote add starter  https://github.com/UCSB-CMPTGCS20-S16/CS20-S16-lab07
+```
 
--   Person2 should log in. You can log in on a separate computer, or just use one of the terminal windows and use the command: `ssh person2@csil.cs.ucsb.edu`
--   Person2 cd's into their *~/cs20* directory
--   Person2 types this command:
-    `scp -r person1@csil.cs.ucsb.edu:cs8/lab07 lab07.snapshot.date.time`
+That adds a second *remote* in addition to your *origin* remote.  That allows you to do:
 
-In that command:
+```
+git pull starter master
+```
 
--   replace person1 with person1's CSIL username (e.g. jsmith)
--   replace date.time with the date and time (e.g. Aug12.1.15pm)
--   don't include any slashes or spaces in the date.time string—it must be a valid part of a filename--periods and dashes are ok though
+and get the starter code from the repo.
 
-Example: `scp -r fredjones@csil.cs.ucsb.edu:cs8/lab07 lab07.snapshot.aug12.1.15pm`
+When you do that, you might get a "merge conflict" for the README.md and the .gitignore files.
 
--   After you type this command, you'll be prompted for a password. Person1 should type his/her password.
--   Don't **_share_** the password, just have person1 type it in person2's window.
--   If it works, there will now be a directory called `lab07.snapshot.date.time` in person2's directory that is a complete copy of the *~/cs20/lab07* directory from person1's account.
--   Please read the "final thoughts" below so that you understand what the proper use of this process it—it is a powerful command, but it has the potential to be abused. With great power comes great responsibility.
+Don't worry.  We'll show in you lecture how to deal with that.
 
-It is only necessary for one of you to submit the work via turnin, as long as both names are in each file.
+Steps 5,6
+----------
 
-But, if you are the person whose account is not the one from which the turnin step is done, be SURE that your name appears! You need to work carefully with your pair partner to avoid misunderstandings and problems.
+There currently are no steps 5 and 6.  These have been eliminated by the move from the old way of running this lab to the new github based setup.
+ 
 
-### Some final thoughts on this step
-
--   In this class pair programming is permitted on *some* assignments.
--   The scp command above *could* be used to copy code from one account to another on assignments where you are not permitted to work together—but **_that would be wrong_**.
--   So don't do that. :)
-
-Step 5: Create a directory for lab07 on one of your accounts
-------------------------------------------------------------
-
-First, create a directory (folder) called lab07, inside your cs20 folder, which is in turn, inside your home directory.
-
-A short way to say that is: create a directory *~/cs20/lab07*
-
-You can do this in one step with the command:
-
-    -bash-4.2$ mkdir ~/cs20/lab07
-    -bash-4.2$
-
-Then cd into that directory. This too can be done in one step:
-
-    -bash-4.2$ cd ~/cs20/lab07
-    -bash-4.2$
-
-Step 6: Copy `lab07Funcs.py` and `lab07Tests.py`
---------------------------------------------
-
-Bring up IDLE (the command is `idle`, and use File =\> New to open a window for function definitions.
-
-In one window, create a new file called `lab07Funcs.py` with the code from this link:
-
--   [lab07Funcs.py](https://raw.githubusercontent.com/UCSB-CMPTGCS20-S16/CS20-S16-lab07/master/lab07Funcs.py?token=AKSMwiIJ5L-zQZWKXmHMI4FrmiFARLgqks5XQ_IrwA%3D%3D)
-
-and in the other window, put the code from this link in a file called `lab07Tests.py`:
-
--   [lab07Tests.py](https://raw.githubusercontent.com/UCSB-CMPTGCS20-S16/CS20-S16-lab07/master/lab07Tests.py?token=AKSMwtyftbEMKCE0ZQjUimVLk2IjLm7Oks5XQ_KxwA%3D%3D)
 
 Step 7. Run the `lab07Tests.py` file for the first time
 -----------------------------------------------------
@@ -282,13 +251,17 @@ Before you submit your assignment, check these things:
 -   Are your files `lab07Funcs.py` and `lab07Tests.py` inside the *~/cs20/lab07* directory?
 -   Finally, look over the grading rubric (near the end of this web page), and make sure that you did everything called for there.
 
-@@@@@@@@@@@@@ FIGURE OUT SUBMIT STUFF @@@@@@@@@@@@@@@@
+To submit your assignment, follow the process you used with lab06 on Gauchospace.  Put a link to your lab07 repo.
 
-To submit your assignment, you need to bring up a terminal window on CSIL.
+Be sure you add these collaborators (if your repo is on github.com)
 
-Go to a shell prompt on csil, navigate to a directory one level higher than your lab07 directory, and use the command <strong>turnin lab07@cs8 lab07</strong> to submit the files in your lab07 directory.
+* pconrad
+* sarahmzhong
 
-If you aren't sure how, look at the more detailed instructions in previous lab assignments.
+And these, if your repo is on github.ucsb.edu:
+
+* pconrad
+* sarahmzhong
 
 Evaluation and Grading Rubric
 =============================
